@@ -87,7 +87,7 @@ sudo yarn cli wallet create
 
 **If you want, you can also import an existing taporoot bitcoin wallet using below command**
 ```bash
-cat <<EOF > config.json
+cat <<EOF > wallet.json
 {
   "accountPath": "m/86'/0'/0'/0/0",
   "name": "cat-5d0fe77c",
