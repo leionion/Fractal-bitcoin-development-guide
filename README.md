@@ -84,14 +84,14 @@ sudo yarn cli wallet create
 ```
 - You can see your wallet address using this command
 ```bash
-yarn cli wallet address
+sudo yarn cli wallet address
 ```
 - Now u need to have $FB in order to mint CAT token, so to get $FB , first import these seed phrase in [Unisat Wallet](https://chrome.google.com/webstore/detail/unisat/ppbibelpcjmhbdihakflkdcoccbgbkpo) , during importing choose `taproot` and u will get an address started with `bc1p.......`
 - Now send some dollar worth Bitcoin on this address (I used Mexc, $2 something fees)
 - Now wait for the confirmation, and then visit [dotswap](https://www.dotswap.app/v1/swap#F_BTC_FB) and deposit BTC to this platform and then swap from BTC to FB using this platform, after swapping withdraw FB from this platfotm to your wallet address
 - Now wait until your tracker get synchronised with latest block, u can use this command to check sync status
 ```bash
-yarn cli wallet address
+sudo yarn cli wallet balances
 ```
 - You will see something like this, if it is 100%, after that u can mint CAT token
 
