@@ -42,15 +42,15 @@ cd packages/tracker
 ```
 - Run `Fractal Bitcoin` node
 ```bash
-sudo chmod 777 docker/data && sudo chmod 777 docker/pgdata && docker compose up -d
+sudo chmod 777 docker/data && sudo chmod 777 docker/pgdata && sudo docker compose up -d
 ```
 - Build docker image under the project root directory
 ```bash
-cd ../../ && docker build -t tracker:latest .
+cd $HOME/cat-token-box && sudo docker build -t tracker:latest .
 ```
 - Run the container
 ```bash
-docker run -d \
+sudo docker run -d \
     --name tracker \
     --add-host="host.docker.internal:host-gateway" \
     -e DATABASE_HOST="host.docker.internal" \
