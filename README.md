@@ -78,10 +78,24 @@ cat <<EOF > config.json
 }
 EOF
 ```
-- Use below command to create a wallet address
+---
+- Use below command to create a new wallet address
 ```bash
 sudo yarn cli wallet create
 ```
+<h2 align=center> Or </h2>
+
+**If you want, you can also import an existing taporoot bitcoin wallet using below command**
+```bash
+cat <<EOF > config.json
+{
+  "accountPath": "m/86'/0'/0'/0/0",
+  "name": "cat-5d0fe77c",
+  "mnemonic": "YOUR TAPROOT ADDRESS MNEMONIC PHRASE"
+}
+EOF
+```
+---
 - You can see your wallet address using this command
 ```bash
 sudo yarn cli wallet address
