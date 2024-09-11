@@ -1,54 +1,97 @@
-<h2 align=center>Mint first CAT20 token CAT on Fractal Mainnet</h2>
+## How to Mint CAT20 Token Based on CAT Protocol of Fractal Mainnet
 
-- Install Docker
+The following are step-by-step instructions on how to mint your CAT20 token on the Fractal Mainnet. This guide provides detailed steps for setting up the necessary environment, installing required components, and executing the minting process.
+
+**Prerequisites**
+
+Before beginning, ensure that you have:
+
+- A system running a supported operating system with internet connectivity.
+- Docker and Docker Compose installed.
+- Administrative privileges to install software packages.
+
+### Step-by-Step Instructions
+
+#### 1. Install Docker
+
+Begin by installing Docker on your system to manage containerized applications.
+
 ```bash
-sudo apt update && sudo apt install -y curl && curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+sudo apt update && sudo apt install -y curl
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 ```
-- Install Docker Compose
+
+#### 2. Install Docker Compose
+
+Docker Compose is essential for defining and running multi-container Docker applications. It can be installed using the following commands:
+
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
-- Make this executable
-```bash
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-- Install `npm`
+
+#### 3. Install Node.js and Yarn
+
+Node.js and Yarn are required for managing dependencies and scripts.
+
+- Install `npm`:
+
 ```bash
 sudo apt-get install npm -y
 ```
-- Install `n` pacakges globally
+
+- Globally install the `n` package manager and switch to a stable Node.js version:
+
 ```bash
 sudo npm i n -g
-```
-- Switch to stable node version
-```bash
 sudo n stable
 ```
-- Install `yarn` package globally
+
+- Globally install Yarn:
+
 ```bash
 sudo npm i -g yarn
 ```
-- Clone `Cat Protocol` repo
+
+#### 4. Clone the CAT Protocol Repository
+
+Download the CAT Protocol repository containing all necessary code.
+
 ```bash
 git clone https://github.com/CATProtocol/cat-token-box && cd cat-token-box
 ```
-- Install and build this project
+
+#### 5. Build and Set Up the Project
+
+Install project dependencies and build the source code:
+
 ```bash
 sudo yarn install && yarn build
 ```
-- Change directory to `tracker`
+
+#### 6. Run the Fractal Bitcoin Node
+
+Navigate to the tracker directory, assign necessary permissions, and start the Fractal Bitcoin node using Docker Compose.
+
 ```bash
 cd packages/tracker
+sudo chmod 777 docker/data && sudo chmod 777 docker/pgdata
+sudo docker compose up -d
 ```
-- Run `Fractal Bitcoin` node
-```bash
-sudo chmod 777 docker/data && sudo chmod 777 docker/pgdata && sudo docker compose up -d
-```
-- Build docker image under the project root directory
+
+#### 7. Build the Docker Image
+
+From the project root directory, build the necessary Docker image.
+
 ```bash
 cd $HOME/cat-token-box && sudo docker build -t tracker:latest .
 ```
-- Run the container
+
+#### 8. Start the Tracker Container
+
+Run the tracker container to facilitate communication with the blockchain network.
+
 ```bash
 sudo docker run -d \
     --name tracker \
@@ -58,11 +101,17 @@ sudo docker run -d \
     -p 3000:3000 \
     tracker:latest
 ```
-- Change directory
+
+#### 9. Configure Your Wallet
+
+Navigate to the CLI directory and create a configuration file for managing wallet settings.
+
 ```bash
 cd $HOME/cat-token-box/packages/cli
 ```
-- Use the below command to create a config.json file using below data u can change username and password
+
+Create a `config.json` using the following template:
+
 ```bash
 cat <<EOF > config.json
 {
@@ -72,51 +121,57 @@ cat <<EOF > config.json
   "maxFeeRate": 30,
   "rpc": {
       "url": "http://127.0.0.1:8332",
-      "username": "ZunXBT",
-      "password": "ZunXBT"
+      "username": "Leionion",
+      "password": "Qazxswedc"
   }
 }
 EOF
 ```
----
-- Use below command to create a new wallet address
+
+#### 10. Create or Import a Wallet
+
+Use Yarn CLI to create a new wallet or import an existing Taproot Bitcoin wallet.
+
+- To create a new wallet:
+
 ```bash
 sudo yarn cli wallet create
 ```
-<h2 align=center> Or </h2>
 
-**If you want, you can also import an existing taporoot bitcoin wallet using below command**
+- To import an existing Taproot wallet, modify the following command with your mnemonic phrase:
+
+Here, Hdpath("m/86'/0'/0'/0/0") is corresponding to Unisat wallet first account's taproot address.
+
 ```bash
 cat <<EOF > wallet.json
 {
   "accountPath": "m/86'/0'/0'/0/0",
-  "name": "cat-5d0fe77c",
-  "mnemonic": "YOUR TAPROOT ADDRESS MNEMONIC PHRASE"
+  "name": "leionion",
+  "mnemonic": "MNEMONIC (12 words)"
 }
 EOF
 ```
----
-- You can see your wallet address using this command
+
+Retrieve your wallet address using:
+
 ```bash
 sudo yarn cli wallet address
 ```
-- Now u need to have $FB in order to mint CAT token, so to get $FB , first import these seed phrase in [Unisat Wallet](https://chrome.google.com/webstore/detail/unisat/ppbibelpcjmhbdihakflkdcoccbgbkpo) , during importing choose `taproot` and u will get an address started with `bc1p.......`
-- Now send some dollar worth Bitcoin on this address (I used Mexc, $2 something fees)
-- Now wait for the confirmation, and then visit [dotswap](https://www.dotswap.app/v1/swap#F_BTC_FB) and deposit BTC to this platform and then swap from BTC to FB using this platform, after swapping withdraw FB from this platfotm to your wallet address
-- Now wait until your tracker get synchronised with latest block, u can use this command to check sync status
+
+#### 11. Obtain $FB CAT20 Tokens
+
+Using this command, you can get your CAT20 token in your taproot wallet.
+
+```bash
+sudo yarn cli mint -i 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0 5 --fee-rate 120
+```
+
+Here, 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0 meaning is inscription_id(transaction_id + vout).
+
+#### 12. Check your $FB CAT20 Token
+
 ```bash
 sudo yarn cli wallet balances
 ```
-- You will see something like this, if it is 100%, after that u can mint CAT token
 
-![image](https://github.com/user-attachments/assets/4abfd1d1-b1fb-461c-89a4-7788db9c88c1)
-
-```bash
-sudo yarn cli mint -i 45ee725c2c5993b3e4d308842d87e973bf1951f5f7a804b21e4dd964ecd12d6b_0 5 --fee-rate 120
-```
-**You should change the fee-rate according to the current market fee, You can check current fee [here](https://explorer.unisat.io/fractal-mainnet)**
-- You can check balance using this command
-```bash
-sudo yarn cli wallet balances
-```
-- Done ✅
+If you encounter any new technical issues or need to share additional information, please contact me on Telegram at @inscNix.
