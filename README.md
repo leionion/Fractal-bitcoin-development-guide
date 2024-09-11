@@ -1,7 +1,5 @@
 <h2 align=center>Mint first CAT20 token CAT on Fractal Mainnet</h2>
 
-# CAT-20
-
 - Install Docker
 ```bash
 sudo apt update && sudo apt install -y curl && curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
@@ -91,7 +89,14 @@ yarn cli wallet address
 - Now u need to have $FB in order to mint CAT token, so to get $FB , first import these seed phrase in [Unisat Wallet](https://chrome.google.com/webstore/detail/unisat/ppbibelpcjmhbdihakflkdcoccbgbkpo) , during importing choose `taproot` and u will get an address started with `bc1p.......`
 - Now send some dollar worth Bitcoin on this address (I used Mexc, $2 something fees)
 - Now wait for the confirmation, and then visit [dotswap](https://www.dotswap.app/v1/swap#F_BTC_FB) and deposit BTC to this platform and then swap from BTC to FB using this platform, after swapping withdraw FB from this platfotm to your wallet address
-- Now mint using below command
+- Now wait until your tracker get synchronised with latest block, u can use this command to check sync status
+```bash
+yarn cli wallet address
+```
+- You will see something like this, if it is 100%, after that u can mint CAT token
+
+![image](https://github.com/user-attachments/assets/4abfd1d1-b1fb-461c-89a4-7788db9c88c1)
+
 ```bash
 sudo yarn cli mint -i 45ee725c2c5993b3e4d308842d87e973bf1951f5f7a804b21e4dd964ecd12d6b_0 5 --fee-rate 120
 ```
