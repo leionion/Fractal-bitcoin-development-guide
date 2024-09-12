@@ -1,4 +1,4 @@
-### Ultimate Guide on Using the CAT CLI Command
+## Ultimate Guide on Using the CAT CLI Command
 
 The CAT CLI provides a comprehensive interface for interacting with CATs (Chia Asset Tokens). Below is a step-by-step guide to using the CAT command line interface effectively:
 
