@@ -174,6 +174,6 @@ Here, 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0 meaning
 sudo yarn cli wallet balances
 ```
 
-The subsequent manual will focus on the CAT Protocol CLI Command Guide. In the CAT_CLI_Guide, I will provide a comprehensive explanation on how to utilize the CAT protocol CLI commands.
+The subsequent manual will focus on the CAT Protocol CLI Command Guide. In the [CAT_CLI_Guide](CAT_CLI_Guide.md), I will provide a comprehensive explanation on how to utilize the CAT protocol CLI commands.
 
 If you encounter any new technical issues or need to share additional information, please contact me on Telegram at @inscNix.
