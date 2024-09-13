@@ -101,7 +101,11 @@ sudo docker run -d \
     -p 3000:3000 \
     tracker:latest
 ```
+If the cli command is not working well, you have to restart tracker by using this command 
 
+```
+docker restart tracker
+```
 #### 9. Configure Your Wallet
 
 Navigate to the CLI directory and create a configuration file for managing wallet settings.
