@@ -171,6 +171,7 @@ sudo yarn cli mint -i 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472
 ```
 
 Here, 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0 meaning is inscription_id(transaction_id + vout).
+To mint specific token (token ID : 1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0), you have to own minter UTXO for that token ID (1be69768c1120bd8f7477d7f1a14dc7c5b5c1c26c37306a660ad9fe472d2d36c_0)...
 
 #### 12. Check your $FB CAT20 Token
 
