@@ -14,7 +14,7 @@ I am a blockchain developer with four years of experience, primarily working wit
 ### 2. Ordinal Protocol Implementation
 
 The Ordinal protocol is  activated at block 21000.
-- **[BRC-20 Token Protocol Implementation]()**
+- **[BRC-20 Token Protocol Implementation](./Ordinal/BRC20-Token-Management.md)**
 - **[Ordinal NFT Protocol Implementation]()**
 
 ### 3. Rune Protocol Implementation
