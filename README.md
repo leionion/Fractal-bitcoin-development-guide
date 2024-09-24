@@ -31,4 +31,3 @@ Should you encounter any issues while utilizing this guide, feel free to reach o
 
 ### Contact Information:
 - **Telegram**: [inscNix](https://t.me/inscNix/)
-- **Twitter**: [@chain_sats](https://x.com/chain_sats/)  
