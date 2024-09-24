@@ -151,3 +151,5 @@ in txid: 94e3254c1237ba7cd42eaeeae713c646ee5dd1cd6c4dd6ef07241d5336cd2aa7
 ### Fee Rate
 
 For the `deploy`, `mint`, and `send` commands, you can specify a fee rate by using the `--fee-rate` option to customize the transaction fees according to network conditions.
+
+If you encounter any new technical issues or need to share additional information, please contact me on Telegram at @inscNix.
