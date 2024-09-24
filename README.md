@@ -27,7 +27,7 @@ The Rune protocol is set to be activated at block 84000.
 
 Coming Soon...
 
-Should you encounter any issues while utilizing this guide, feel free to reach out to me on Telegram. Additionally, if you have new ideas or wish to develop new products on the Fractal network, I am open to collaboration and brainstorming solutions to enhance our development processes.
+Should you encounter any issues while utilizing this guide, feel free to reach out to me on Telegram. Additionally, if you have new ideas or wish to develop new products on the Fractal network, I am open to collaboration and brainstorming solutions to enhance our development processes. 
 
 ### Contact Information:
 - **Telegram**: [inscNix](https://t.me/inscNix/)
