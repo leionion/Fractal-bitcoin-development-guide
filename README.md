@@ -17,7 +17,7 @@ The Ordinal protocol is  activated at block 21000.
 - **[BRC-20 Token Protocol Implementation](./Ordinal/BRC20-Token-Management.md)**
 - **[Ordinal NFT Protocol Implementation]()**
 
-### 3. Rune Protocol Implementation
+### 3. Rune Protocol Implementation 
 
 The Rune protocol is set to be activated at block 84000.
 
