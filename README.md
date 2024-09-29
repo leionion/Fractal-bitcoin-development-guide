@@ -10,7 +10,7 @@ I am a blockchain developer with four years of experience, primarily working wit
 
 - **[How to Mint CAT20 Token Based on CAT Protocol of Fractal Mainnet](./CAT20/CAT20_Token_Mint_Guide.md)**
 - **[Ultimate Guide on Using the CAT CLI Command](./CAT20/CAT_CLI_Guide.md)**
-- **[OP_CAT opcode guide for CAT20 token standard of CAT protocoll](./CAT20/OP_CAT.md)**
+- **[OP_CAT opcode guide for CAT20 token standard of CAT protocol](./CAT20/OP_CAT.md)**
 ### 2. Ordinal Protocol Implementation
 
 The Ordinal protocol is  activated at block 21000.
