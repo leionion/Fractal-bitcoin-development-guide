@@ -181,4 +181,11 @@ sudo yarn cli wallet balances
 
 The subsequent manual will focus on the CAT Protocol CLI Command Guide. In the [CAT_CLI_Guide](CAT_CLI_Guide.md), I will provide a comprehensive explanation on how to utilize the CAT protocol CLI commands.
 
-If you encounter any new technical issues or need to share additional information, please contact me on Telegram at @inscNix.
+
+### Contact info:
+
+If you encounter any new technical issues or need development inquiries, please contact me.
+
+- Telegram: https://t.me/inscNix/
+- Twitter: https://x.com/chain_sats/
+
