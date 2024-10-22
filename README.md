@@ -5,7 +5,7 @@ This guide serves as a comprehensive guide to the Fractal Bitcoin network.
 
 
 I am a blockchain developer with four years of experience, primarily working within the Bitcoin and Solana ecosystems. This guide is a work in progress and may encounter unexpected challenges. Therefore, users are advised to critically evaluate and reference this material. Updates will be provided as new announcements and technologies emerge within the Fractal Bitcoin ecosystem.
- 
+  
 ### 1. CAT20 Protocol Implementation
 
 - **[How to Mint CAT20 Token Based on CAT Protocol of Fractal Mainnet](./CAT20/CAT20_Token_Mint_Guide.md)**
